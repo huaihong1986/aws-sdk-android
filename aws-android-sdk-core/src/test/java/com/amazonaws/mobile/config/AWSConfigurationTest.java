@@ -58,7 +58,7 @@ public class AWSConfigurationTest {
             assertNotNull(awsConfiguration);
 
             assertNotNull(awsConfiguration.optJsonObject("AppSync"));
-            assertEquals("API_KEY", awsConfiguration.optJsonObject("AppSync").get("AuthMode"));
+            assertEquals("API_KEY", awsConfiguration.optJsonObject("AppSync").getString("AuthMode"));
         } catch (JSONException e) {
             fail("Error in constructing AWSConfiguration." + e.getLocalizedMessage());
         }
